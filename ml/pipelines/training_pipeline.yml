@@ -1,0 +1,13 @@
+name: forecast_training_pipeline
+steps:
+  - name: parallel_forecast
+    type: ParallelRunStep
+    config:
+      compute: aml-compute
+      inputs:
+        input_data:
+          path: azureml://datastores/workspaceblobstore/paths/processed/orders
+      outputs:
+        forecast_results:
+          path: azureml://datastores/workspaceblobstore/paths/forecasts
+      environment: azureml:forecast-env@latest
