@@ -1,0 +1,19 @@
+{
+  "dataSources": [
+    {
+      "name": "ForecastData",
+      "type": "AzureSynapse",
+      "connectionDetails": {
+        "server": "retail-synapse.sql.azuresynapse.net",
+        "database": "forecastdb"
+      }
+    }
+  ],
+  "visuals": {
+    "forecastChart": {
+      "type": "line",
+      "measures": ["PredictedQuantity"],
+      "categories": ["Date", "SKU"]
+    }
+  }
+}
