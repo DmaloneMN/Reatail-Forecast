@@ -1,0 +1,10 @@
+{
+  "version": "1.0",
+  "connections": [
+    {
+      "name": "synapse",
+      "server": "retail-synapse.sql.azuresynapse.net",
+      "database": "forecastdb"
+    }
+  ]
+}
