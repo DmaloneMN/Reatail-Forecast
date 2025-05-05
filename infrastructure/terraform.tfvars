@@ -1,0 +1,5 @@
+resource_group_name = "retail-forecast-rg"
+location           = "eastus"
+storage_account_name = "retailforecast${random_string.suffix.result}"
+ml_workspace_name  = "order-forecast-ml"
+synapse_workspace_name = "retail-synapse"
