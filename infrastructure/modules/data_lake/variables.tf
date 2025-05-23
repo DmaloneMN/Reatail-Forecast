@@ -1,15 +1,31 @@
 variable "prefix" {
-  description = "Naming prefix"
   type        = string
+  description = "Naming prefix"
 }
 
 variable "env" {
-  description = "Environment (dev/prod)"
   type        = string
+  description = "Environment (dev/prod)"
 }
 
-variable "allowed_subnet_ids" {
-  description = "Subnets with access"
+variable "resource_group_name" {
+  type        = string
+  description = "Resource group name"
+}
+
+variable "location" {
+  type        = string
+  description = "Azure region"
+}
+
+variable "storage_account_name" {
+  type        = string
+  description = "Storage account name"
+  default     = null  # Optional
+}
+
+variable "containers" {
   type        = list(string)
-  default     = []
+  description = "List of container names"
+  default     = ["raw", "processed", "forecasts"]
 }
